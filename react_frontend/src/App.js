@@ -19,6 +19,7 @@ function App() {
 
   return (
     <div class="flex-container">
+      <div>{names}</div>
       <SelectFilter style="order: 1" names={names} />
       <TotalNames style="order: 2" names={names} />
       <FilterNames style="order: 3" names={names} />
