@@ -12,19 +12,19 @@ function App() {
   useEffect(() => {
     nameService
       .getAll()
-      .then(initialNames => {
+      .then(initialNames => 
         setNames(initialNames)
-      })
+      )
   }, [])
+  console.log('render', names.length, names)
 
   return (
-    <div class="flex-container">
-      <div>{names}</div>
+    <div className="flex-container">
       <SelectFilter style="order: 1" names={names} />
       <TotalNames style="order: 2" names={names} />
       <FilterNames style="order: 3" names={names} />
     </div>
   );
-}
+} 
 
 export default App;

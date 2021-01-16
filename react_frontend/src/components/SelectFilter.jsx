@@ -32,7 +32,7 @@ const SelectFilter = ({ names }) => {
   }, [sortType]);
 
   return (
-    <div class="main">
+    <div className="main">
       <select onChange={(e) => setSortType(e.target.value)}>
         <option value="all">all</option>
         <option value="amount">order by amount</option>
