@@ -14,7 +14,7 @@ const FilterNames = ({ names }) => {
     }, [searchterm]);
 
     return (
-        <div class="side">
+        <div className="side">
             <input type='text' id='give a name' name='insert a name' value={searchterm} onChange={(e) => setSearchterm(e.target.value)} />
             <p>{amountOfName}</p>
         </div>

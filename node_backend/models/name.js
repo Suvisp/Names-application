@@ -6,7 +6,7 @@ const nameSchema = new mongoose.Schema({
     type: String,
   },
   amount: {
-    type: Number  
+    type: String  
   },
 })
 
@@ -18,4 +18,4 @@ nameSchema.set('toJSON', {
   }
 })
 
-module.exports = mongoose.model('Name', nameSchema)
+module.exports = mongoose.model('Names', nameSchema)

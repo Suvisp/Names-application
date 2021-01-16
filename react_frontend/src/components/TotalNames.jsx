@@ -11,7 +11,7 @@ const TotalNames = ({ names }) => {
     }, []);
 
     return (
-        <div class="side"> 
+        <div className="side"> 
             Total amount of all the names: {total}
         </div>
     )
