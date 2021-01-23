@@ -1,18 +1,23 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 
 const TotalNames = ({ names }) => {
     console.log('Total names list', { names })
-    const [total, setTotal] = useState([])
+    const [totalAmount, setTotalAmount] = useState([])
 
-    useEffect(() => {
-        let totalofnames = (names.reduce((a, b) => a = a + b.amount, 0))
-        console.log('totalofnames', totalofnames)
-        setTotal(totalofnames);
-    }, []);
+    const calculateTotal = () => {
+        let totalAmount = names.reduce((total, item) => {
+            return total + item.amount;
+        }, 0);
+
+        setTotalAmount(totalAmount);
+    };
 
     return (
-        <div className="side"> 
-            Total amount of all the names: {total}
+        <div className="box">
+            <label>Find the total amount of the names</label><br></br>
+            <button onClick={() => calculateTotal()}>Click here</button>
+            <br></br>
+            {totalAmount}
         </div>
     )
 }

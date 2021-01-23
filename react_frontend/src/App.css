@@ -1,30 +1,62 @@
 .App {
-  text-align: center;
+  margin: 1em auto;
+  width: 95%;
+  min-height: 100%;
 }
 
-.flex-container {
-  display: flex;
-  flex-wrap: wrap;
-  background-color: DodgerBlue;
-  flex-direction: row;
+.Content {
+  margin: 50pt auto;  
+  width: 95%;
+  border: 4pt solid lightgray;
+  padding: 1em;
+  color: black;
+  background-color:rgb(224, 28, 28);
+  opacity:0.9;
 }
 
-.flex-container > div {
-  background-color: #f1f1f1;
-  margin: 10px;
-  padding: 20px;
-  font-size: 30px;
+.Home .jumbotron {
+  color: black;
+  max-height: 95px;
 }
 
-.main {
-  flex: 40%;
-  background-color: white;
-  padding: 20px;
+.linkspan {
+  color: blue;
 }
 
-.side {
-  flex: 20%;
-  background-color: #f1f1f1;
-  padding: 20px;
+a, .link {
+  color: black;
 }
 
+.linkspan:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.list-group-item.active {
+  background-color: darkgray;
+  border-color: darkgrey;
+}
+
+.navbar{
+ margin: 10pt auto;  
+  width: 95%;
+  border: 4pt solid black;
+  padding: 1em;
+  color: black;
+  background-color: red;
+  opacity:0.9;
+}
+
+.box{
+  box-shadow: 5 5 5 5 black;
+  background-color: rgb(64, 82, 75,0.9);
+  
+}
+
+.list th{
+ background-color:  rgb(35, 43, 40);
+ 
+}
+.list{
+  width: 95%;
+}

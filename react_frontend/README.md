@@ -1,6 +1,6 @@
-The UI is made with React js.
+First version was made with json-server namesdb.json file. In second version Node js. backend and MongoDB database were added to the project. 
 
-First version was made with json-server namesdb.json file In second version, Node js backend and MongoDB database were added to the project. The rest API get request is working through UI-backend-db.
+Rest API get request works through UI-backend-db.
 
-You may select to show the names and amounts 1) order by amount, most popular first or 2) in alphabetical order.
-The names-app akso returns the amount of the name given as a parameter.
+The UI shows names and amounts in order by amount, most popular first (1), in alphabetical order (2) and
+returns the amount of the name given as a parameter (4).
