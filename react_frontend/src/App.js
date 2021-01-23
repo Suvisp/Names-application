@@ -1,5 +1,8 @@
 import React, { useState, useEffect } from 'react'
+import { Route, Switch } from 'react-router-dom';
 import './App.css';
+import Navigation from './components/Navigation';
+import About from './components/About';
 import TotalNames from './components/TotalNames'
 import SelectFilter from './components/SelectFilter'
 import FilterNames from './components/FilterNames'
@@ -12,19 +15,33 @@ function App() {
   useEffect(() => {
     nameService
       .getAll()
-      .then(initialNames => 
+      .then(initialNames =>
         setNames(initialNames)
       )
   }, [])
   console.log('render', names.length, names)
 
   return (
-    <div className="flex-container">
-      <SelectFilter style="order: 1" names={names} />
-      <TotalNames style="order: 2" names={names} />
-      <FilterNames style="order: 3" names={names} />
+    <div className="App">
+      <Navigation />
+      <div className="Content">
+        <Switch>
+          <Route path="/selectfilter">
+            <SelectFilter names={names} />
+          </Route>
+          <Route path="/totalnames">
+            <TotalNames names={names} />
+          </Route>
+          <Route path="/filternames">
+            <FilterNames names={names} />
+          </Route>
+          <Route path="/">
+            <About />
+          </Route>
+        </Switch>
+      </div>
     </div>
   );
-} 
+}
 
 export default App;

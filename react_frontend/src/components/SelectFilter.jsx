@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react'
+import Form from 'react-bootstrap/Form'
 
 const SelectFilter = ({ names }) => {
   const [data, setData] = useState([''])
@@ -32,15 +33,21 @@ const SelectFilter = ({ names }) => {
   }, [sortType]);
 
   return (
-    <div className="main">
-      <select onChange={(e) => setSortType(e.target.value)}>
-        <option value="all">all</option>
-        <option value="amount">order by amount</option>
-        <option value="name">order by name</option>
-      </select>
+    <div className="box">
 
-      {data.map(n => (
-        <div key={n.id} style={{ margin: '30px' }}>
+      <Form>
+        <Form.Group controlId="exampleForm.SelectCustomSizeSm">
+          <Form.Label>Get the list of names</Form.Label><br></br>
+          <Form.Control as="select" size="sm" custom onChange={(e) => setSortType(e.target.value)}>
+            <option value="all">original order</option>
+            <option value="amount">order by amount</option>
+            <option value="name">order by name</option>
+          </Form.Control>
+        </Form.Group>
+      </Form>
+
+      {data.map((n, i) => (
+        <div key={i} style={{ margin: '30px' }}>
           <div>{`Name: ${n.name}`}</div>
           <div>{`Amount: ${n.amount}`}</div>
         </div>

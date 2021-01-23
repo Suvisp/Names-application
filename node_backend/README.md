@@ -1,1 +1,1 @@
-Node js. back-end with Rest API
+Node js. back-end with Rest API and MongoDB database.
