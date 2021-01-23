@@ -1,5 +1,3 @@
-The UI is made with React js.
-
 First version was made with json-server namesdb.json file. In second version Node js. backend and MongoDB database were added to the project. 
 
 Rest API get request works through UI-backend-db.
